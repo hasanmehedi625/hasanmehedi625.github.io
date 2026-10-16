@@ -1,0 +1,310 @@
+<title>Md. Mehedi Hasan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single measured column, left-aligned; sticky rail nav; hairline rules instead of cards. Palette from VIIRS nighttime radiance — deep orbital ink, sodium-vapor amber. */
+:root{
+  --bg:#f7f5f1;
+  --surface:#efebe4;
+  --fg:#1a1d26;
+  --muted:#5d6273;
+  --rule:#d3cdc2;
+  --accent:#b4591a;
+  --accent-soft:#f0dcc8;
+  --font-display:"Spectral",Georgia,"Times New Roman",serif;
+  --font-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1118;--surface:#161b25;--fg:#e8e6e1;--muted:#9aa1b2;
+    --rule:#262d3b;--accent:#e8963f;--accent-soft:#2a2016;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1118;--surface:#161b25;--fg:#e8e6e1;--muted:#9aa1b2;
+  --rule:#262d3b;--accent:#e8963f;--accent-soft:#2a2016;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+header.masthead{padding-block:56px 34px}
+.eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+h1{font-family:var(--font-display);font-size:clamp(2.1rem,6vw,3.1rem);font-weight:600;line-height:1.08;letter-spacing:-.015em;margin:0 0 .5rem;text-wrap:balance}
+.role{font-family:var(--font-display);font-style:italic;font-size:1.12rem;color:var(--muted);margin:0 0 22px;max-width:60ch}
+.lede{font-size:1.04rem;max-width:64ch;margin:0 0 10px}
+.interests{font-size:.95rem;color:var(--muted);max-width:64ch;margin:0 0 24px}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px 20px;font-family:var(--font-mono);font-size:.82rem;align-items:center}
+.contact-row .label{color:var(--muted)}
+.copy-btn{font-family:var(--font-mono);font-size:.74rem;background:transparent;border:1px solid var(--rule);color:var(--muted);padding:3px 8px;border-radius:3px;cursor:pointer}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;gap:18px;flex-wrap:wrap;padding-block:11px;font-family:var(--font-mono);font-size:.78rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:11;background:var(--bg)}
+nav.toc a{color:var(--muted);text-decoration:none}
+nav.toc a:hover{color:var(--accent)}
+
+section{padding-block:40px 8px}
+section + section{border-top:1px solid var(--rule)}
+h2{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;margin:0 0 22px}
+h3{font-family:var(--font-display);font-size:1.22rem;font-weight:600;margin:0 0 4px;line-height:1.25;text-wrap:balance}
+p{max-width:65ch}
+.meta{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin:0 0 10px;line-height:1.5}
+.entry{margin-bottom:32px}
+.entry:last-child{margin-bottom:12px}
+.entry ul{margin:10px 0 0;padding-left:1.1em}
+.entry li{margin-bottom:6px;max-width:64ch}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tag{font-family:var(--font-mono);font-size:.72rem;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:2px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.grid2 > div{min-width:0}
+.skilllist{font-size:.95rem;margin:0;padding-left:1.1em}
+.skilllist li{margin-bottom:4px}
+.pub{margin-bottom:20px;max-width:66ch}
+.pub .authors{font-size:.95rem}
+.pub em{font-family:var(--font-display)}
+.status{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:2px 7px;border-radius:2px;margin-left:6px;white-space:nowrap}
+.awards{padding-left:1.1em;max-width:64ch}
+.awards li{margin-bottom:6px}
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.refs > div{min-width:0}
+footer{border-top:1px solid var(--rule);padding-block:24px;font-family:var(--font-mono);font-size:.76rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Washington State University · Pullman, WA</p>
+  <h1>Md. Mehedi Hasan</h1>
+  <p class="role">Graduate researcher in civil &amp; environmental engineering — satellite remote sensing for disaster risk and infrastructure resilience</p>
+  <p class="lede">I build machine learning models that read nighttime satellite imagery to estimate where, and how severely, natural hazards knock out electric power. My work sits between remote sensing, probabilistic risk assessment, and infrastructure resilience, with a background in disaster science from the University of Dhaka.</p>
+  <p class="interests"><strong>Research interests:</strong> disaster risk analysis · probabilistic risk assessment · infrastructure resilience · risk-informed decision-making · remote sensing and GIS · machine learning for engineering problems</p>
+  <div class="contact-row">
+    <span class="label">Email</span>
+    <span id="email">mdmehedi.hasan@wsu.edu</span>
+    <button class="copy-btn" id="copy" type="button">Copy</button>
+    <a href="https://github.com/hasanmehedi625">GitHub</a>
+    <a href="https://scholar.google.com/">Google&nbsp;Scholar</a>
+    <a href="https://www.researchgate.net/">ResearchGate</a>
+    <a href="https://www.linkedin.com/">LinkedIn</a>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="research">
+  <h2>Research</h2>
+
+  <div class="entry">
+    <h3>Predicting wildfire-induced power outages with nighttime lights data</h3>
+    <p class="meta">MS thesis, Washington State University · Advisor: Dr. Ji Yun Lee</p>
+    <p>Nighttime light radiance drops when the grid goes down, but the signal is noisy, viewing-angle dependent, and only loosely tied to how many customers actually lost service. I am building a satellite-based framework that learns a pixel-level deviation score from VIIRS nighttime light imagery and pools those pixels, weighted by customer count, into county-level estimates of the fraction of customers out — supervised against EAGLE-I outage records.</p>
+    <ul>
+      <li>Hazard-agnostic detector first trained across hurricane events, then transferred to wildfire settings where outage cause is genuinely ambiguous.</li>
+      <li>Processing pipelines built for 15 hurricane events across FL, LA, TX, NC, VA, GA and Puerto Rico, including Irma, Michael, Ida, Harvey, Florence, Beryl and Helene.</li>
+      <li>Per-pixel angular correction of day–night band radiance using sensor zenith angle, nadir-normalized with a quadratic model.</li>
+      <li>Leave-one-event-out validation with multi-seed ensembles and regime-stratified error reporting, so performance is measured on storms the model has never seen.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">VIIRS / Black Marble</span>
+      <span class="tag">Multiple-instance learning</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">EAGLE-I</span>
+      <span class="tag">HPC / SLURM</span>
+    </div>
+  </div>
+
+  <div class="entry">
+    <h3>Spatial structure of outages and the power grid network</h3>
+    <p class="meta">In progress</p>
+    <p>Outage pixels should cluster along the physical power network rather than scatter at random. I test this by combining substation, transmission line and road geometry with density-based clustering of continuous outage probability, then learning a correction term from each pixel's signed distance to its cluster boundary.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Distinguishing wildfire-driven outages from PSPS and cascading failure</h3>
+    <p class="meta">In progress</p>
+    <p>Not every outage in a fire-affected region is caused by fire damage. Some are preemptive public safety power shutoffs; others propagate into regions the hazard never reached, through grid interdependency. I am using a vision-language model together with utility outage-cause records to separate these mechanisms.</p>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <p class="authors">Hasan, Md. M., Rahman, Md. Z., &amp; Fahim, A. K. F. (2025). Earthquake induced liquefaction hazard analysis for Chittagong City using machine learning. <em>Geomatics, Natural Hazards and Risk</em>, 16(1).</p>
+    <p class="meta"><a href="https://doi.org/10.1080/19475705.2025.2451126">doi.org/10.1080/19475705.2025.2451126</a></p>
+  </div>
+
+  <div class="pub">
+    <p class="authors">Hasan, Md. M., Rahman, Md. Z., &amp; Fahim, A. K. F. (2026). Comparative evaluation of machine learning algorithms for LULC classification and change detection in Dhaka City. <em>European Journal of Remote Sensing</em>.<span class="status">Submitted</span></p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <h3>Research Assistant — Washington State University</h3>
+    <p class="meta">Civil and Environmental Engineering · Pullman, WA · Aug 2025 – present<br>Wildfire-Resilient Power Grid Infrastructure Planning: Socio-Technical Innovations for Energy and Health Equity · U.S. National Science Foundation</p>
+    <ul>
+      <li>Developing a satellite-based framework for wildfire-related power outage prediction using VIIRS nighttime light imagery.</li>
+      <li>Characterizing the spatial distribution of outages and their relationship with power grid networks.</li>
+      <li>Using a vision-language model and outage-cause records to distinguish wildfire-driven outages from PSPS and cascading failures.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h3>Teaching Assistant — Washington State University</h3>
+    <p class="meta">Civil and Environmental Engineering · Pullman, WA · Jan 2026 – present</p>
+    <p>CE 403 Air Quality Management · CE 317 Introduction to Geotechnical Engineering · CE 341 Introduction to Environmental Engineering. Grading, exam invigilation, and office hours.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Junior Geologist — Environmental &amp; Geo-Spatial Solutions</h3>
+    <p class="meta">Dhaka, Bangladesh · Jan 2024 – Jun 2025<br>Upazila Town (Non-Municipal) Master Plan Preparation and Basic Infrastructure Development Project · Sheltech Consultants (Pvt.) Ltd</p>
+    <p>Acquisition and analysis of seismic data using MASW and downhole seismic surveys.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Research Assistant — University of Dhaka</h3>
+    <p class="meta">Disaster Science and Climate Resilience · Dhaka, Bangladesh · Jan 2023 – Mar 2024<br>Climate-induced Shock Responsive Disaster Resilience Mapping for Adaptive Social Protection Programming of the At-Risk Population in Sylhet Division · UNDP and Australian Aid</p>
+    <ul>
+      <li>Developed questionnaires and collected data through household surveys, key informant interviews and focus group discussions.</li>
+      <li>Analyzed post-disaster damage and loss data in R and SPSS.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="entry">
+    <h3>MS in Engineering, Civil and Environmental Engineering</h3>
+    <p class="meta">Washington State University, Pullman, WA · expected July 2027 · GPA 3.70/4.00</p>
+    <p>Thesis: <em>Predicting Wildfire-Induced Power Outages with Nighttime Lights Data.</em> Advisor: Dr. Ji Yun Lee.</p>
+  </div>
+
+  <div class="entry">
+    <h3>MSc in Disaster Science and Climate Resilience</h3>
+    <p class="meta">University of Dhaka, Bangladesh · July 2025 · GPA 3.85/4.00</p>
+    <p>Thesis: <em>Comparative evaluation of machine learning algorithms for LULC classification and change detection in Dhaka City.</em></p>
+  </div>
+
+  <div class="entry">
+    <h3>BSc in Disaster Science and Management</h3>
+    <p class="meta">University of Dhaka, Bangladesh · April 2024 · GPA 3.65/4.00</p>
+    <p>Thesis: <em>Earthquake induced liquefaction hazard analysis for Chittagong City using machine learning.</em></p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid2">
+    <div>
+      <p class="meta">Data analysis</p>
+      <ul class="skilllist">
+        <li>Python, Jupyter Notebook</li>
+        <li>R, SPSS</li>
+        <li>MATLAB</li>
+      </ul>
+    </div>
+    <div>
+      <p class="meta">Remote sensing</p>
+      <ul class="skilllist">
+        <li>Google Earth Engine</li>
+        <li>ERDAS Imagine, ENVI 5.3</li>
+        <li>SNAP</li>
+      </ul>
+    </div>
+    <div>
+      <p class="meta">GIS</p>
+      <ul class="skilllist">
+        <li>QGIS</li>
+        <li>ArcGIS Pro, ArcGIS 10.8</li>
+        <li>ILWIS</li>
+      </ul>
+    </div>
+    <div>
+      <p class="meta">Simulation and hazard tools</p>
+      <ul class="skilllist">
+        <li>FlamMap</li>
+        <li>OpenQuake</li>
+        <li>HAZUS</li>
+      </ul>
+    </div>
+    <div>
+      <p class="meta">Field instrumentation</p>
+      <ul class="skilllist">
+        <li>Geometrics Seismodule Controller</li>
+        <li>MASW and downhole seismic surveys</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="margin-top:38px">Awards</h2>
+  <ul class="awards">
+    <li>Honors Scholarship, University of Dhaka, 2022–2023</li>
+    <li>Research Grant, Urban Resilience Center, Ministry of Disaster Management, 2024</li>
+    <li>Multiple academic scholarships from banking institutions</li>
+    <li>University volleyball team; division- and district-level awards</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I am happy to hear from researchers working on hazard modeling, remote sensing, or grid resilience. A PDF of my full CV is available on request.</p>
+  <p class="meta" style="margin-top:14px">mdmehedi.hasan@wsu.edu · +1 509 432 3103 · Pullman, WA 99163, USA</p>
+
+  <h2 style="margin-top:38px">References</h2>
+  <div class="refs">
+    <div>
+      <h3>Dr. Ji Yun Lee</h3>
+      <p class="meta">Advisor · Associate Professor<br>Civil and Environmental Engineering<br>Washington State University<br>jiyun.lee@wsu.edu</p>
+    </div>
+    <div>
+      <h3>Dr. Md. Zillur Rahman</h3>
+      <p class="meta">Supervisor · Professor<br>Disaster Science and Climate Resilience<br>University of Dhaka<br>zillur@du.ac.bd</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Md. Mehedi Hasan · Washington State University · Updated October 2026
+</footer>
+
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var btn = this;
+  var node = document.getElementById('email');
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); }
+  function select(){
+    try {
+      var r = document.createRange();
+      r.selectNodeContents(node);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+    } catch(e) {}
+    btn.textContent = 'Select + copy';
+    setTimeout(function(){ btn.textContent = 'Copy'; }, 2200);
+  }
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(node.textContent.trim()).then(done, select);
+    } else { select(); }
+  } catch(e) { select(); }
+});
+</script>
